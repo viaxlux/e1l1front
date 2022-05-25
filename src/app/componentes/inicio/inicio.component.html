@@ -1,0 +1,86 @@
+<!--
+<div class="container">
+  <button class="btn btn-primary" [routerLink]="['/agregar']" routerLinkActive="router-link-active" >Agregar</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Tipo</th>
+        <th scope="col">Foto</th>
+        <th scope="col">Actividad</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of lista">
+
+        <td>{{x.tipo}}</td>
+        <td>{{x.foto}}</td>
+        <td>{{x.actividad}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="eliminar(x.id)">Eliminar</button>
+
+          <button class="btn btn-warning" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active">Modificar</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+-->
+<div class="container">
+  <button class="btn btn-primary" [routerLink]="['/agregar']" routerLinkActive="router-link-active" >Agregar</button>
+  <table class="table">
+    <!--<thead>
+      <tr>
+        <th scope="col">Tipo</th>
+        <th scope="col">Foto</th>
+        <th scope="col">Actividad</th>
+        <th>#</th>
+      </tr>
+    </thead>-->
+    <tbody>
+      <hr>
+      <h1>Estudios</h1>
+      <tr *ngFor="let x of lista">
+        <div *ngIf="x.tipo==='Estudios'">
+        <!--<td>{{x.tipo}}</td>
+        <td>{{x.foto}}</td>-->
+        <td>{{x.actividad}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="eliminar(x.id)">Eliminar</button>
+
+          <button class="btn btn-warning" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active">Modificar</button>
+        </td>
+        </div>
+      </tr>
+      <hr>
+      <h1>Experiencia Laboral</h1>
+      <tr *ngFor="let x of lista">
+        <div *ngIf="x.tipo==='Laboral'">
+        <!--<td>{{x.tipo}}</td>
+        <td>{{x.foto}}</td>-->
+        <td>{{x.actividad}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="eliminar(x.id)">Eliminar</button>
+
+          <button class="btn btn-warning" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active">Modificar</button>
+        </td>
+        </div>
+      </tr>
+      <hr>
+      <h1>Proyectos</h1>
+      <tr *ngFor="let x of lista">
+        <div *ngIf="x.tipo==='Proyectos'">
+        <!--<td>{{x.tipo}}</td>
+        <td>{{x.foto}}</td>-->
+        <td>{{x.actividad}}</td>
+        <td>
+          <button type="button" class="btn btn-danger btn-xs" (click)="eliminar(x.id)">Eliminar</button>
+
+          <button type="button" class="btn btn-warning btn-xs" [routerLink]="['/editar/', x.id]" routerLinkActive="router-link-active">Modificar</button>
+        </td>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
