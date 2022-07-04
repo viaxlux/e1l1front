@@ -22,7 +22,7 @@ export class AgregarComponent implements OnInit {
   agregarTarea(){
     this.tareraService.saveTarea(this.tareaNueva).subscribe(
       res=>{console.log(res);
-      this.router.navigate(["/inicio"]);},
+      this.router.navigate(["/do"]);},
       err=>console.log(err)
     );
   }

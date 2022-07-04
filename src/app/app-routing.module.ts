@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AgregarComponent } from './componentes/agregar/agregar.component';
 import { EditarComponent } from './componentes/editar/editar.component';
-import { InicioComponent } from './componentes/inicio/inicio.component';
+//import { InicioComponent } from './componentes/inicio/inicio.component';
+import { LoginComponent} from './components/login/login.component';
+import { DoComponent} from './components/do/do.component';
 const routes: Routes = [
-  {path:"", redirectTo: "inicio", pathMatch:"full"},
-  {path: "inicio", component: InicioComponent},
+  {path:"", redirectTo: "do", pathMatch:"full"},
+  {path: "do", component: DoComponent},
   {path: "editar/:id", component: EditarComponent},
-  {path: "agregar", component: AgregarComponent}
+  {path: "agregar", component: AgregarComponent},
+  {path: "login", component:LoginComponent}
 ];
 
 @NgModule({

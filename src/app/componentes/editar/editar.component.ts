@@ -24,7 +24,7 @@ export class EditarComponent implements OnInit {
   guardad(){
     this.tareaService.editTarea(
       this.id, this.tareaActual).subscribe(
-        res=> {this.router.navigate(["/inicio"]);},
+        res=> {this.router.navigate(["/do"]);},
         err=>console.log(err)
 
       );
